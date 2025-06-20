@@ -1,4 +1,4 @@
-from tkinter import Tk, BOTH, Canvas
+from tkinter import Tk, BOTH, Canvas, Button
 
 
 class Window:
@@ -11,6 +11,18 @@ class Window:
         self.__canvas.pack(fill=BOTH, expand=1)
 
         self.__running = False
+
+    def solve_button(self, func):
+        button = Button(
+            self.__root, 
+            text='Solve', 
+            font=("Arial", 15),
+            width=20, 
+            bg="lightgreen", 
+            cursor="hand2", 
+            command=func
+            )
+        button.pack()
 
     def redraw(self):
         self.__root.update_idletasks()

@@ -24,6 +24,9 @@ class Maze:
         if seed:
             random.seed(seed)
 
+        self._create_maze()
+
+    def _create_maze(self):
         self._create_cells()
         self._break_entrance_and_exit()
         self._break_walls_r(0, 0)

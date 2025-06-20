@@ -1,6 +1,7 @@
 from graphics import Window
 from maze import Maze
 
+
 def main():
     screen_x = 800
     screen_y = 600
@@ -15,8 +16,8 @@ def main():
     print("Generating maze...")
     maze = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win, seed=None)
     print("Maze is created!")
-    print("Solving maze...")
-    maze.solve()
+
+    win.solve_button(maze.solve)
     print("Maze is solve!")
 
     win.wait_for_close()
